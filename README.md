@@ -22,13 +22,15 @@ Editor de Código: Visual Studio
 Controle de Versão: GIT e GitHub
 
 🚀 Atualizações Diárias
+
 Os commits serão realizados diariamente, refletindo os exercícios e códigos desenvolvidos durante o estudo.
 
 🤝 Contribuição
+
 Este projeto é voltado para aprendizado individual, mas sugestões e feedbacks são sempre bem-vindos. Eles são uma excelente oportunidade para expandir o conhecimento e melhorar as práticas de desenvolvimento.
 
 📧 Contato
-Caso tenha dúvidas ou sugestões:
 
+Caso tenha dúvidas ou sugestões:
 E-mail: jenifferferrasz03@gmail.com
 LinkedIn: www.linkedin.com/in/jeniffer-ferraz-42166a254
