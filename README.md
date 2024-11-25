@@ -14,8 +14,11 @@ Branch main: Versão estável consolidada, representando o "produto final".
 Branch develop: Área de desenvolvimento ativa, onde todo o aprendizado e progresso serão registrados.
 
 💻 Ferramentas Utilizadas
+
 Linguagem: Python
+
 Editor de Código: Visual Studio
+
 Controle de Versão: GIT e GitHub
 
 🚀 Atualizações Diárias
