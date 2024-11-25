@@ -21,6 +21,7 @@ Editor de Código: Visual Studio
 
 Controle de Versão: GIT e GitHub
 
+
 🚀 Atualizações Diárias
 
 Os commits serão realizados diariamente, refletindo os exercícios e códigos desenvolvidos durante o estudo.
