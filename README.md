@@ -32,5 +32,7 @@ Este projeto é voltado para aprendizado individual, mas sugestões e feedbacks 
 📧 Contato
 
 Caso tenha dúvidas ou sugestões:
+
 E-mail: jenifferferrasz03@gmail.com
+
 LinkedIn: www.linkedin.com/in/jeniffer-ferraz-42166a254
