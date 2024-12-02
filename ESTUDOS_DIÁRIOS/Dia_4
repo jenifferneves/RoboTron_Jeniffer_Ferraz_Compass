@@ -1,0 +1,30 @@
+Operadores
+Usados para realizar operações em variáveis ou valores.
+Aritméticos: +, -, *, /, %, **, //
+Exemplo: x + y, x ** 2 (potência).
+Comparação: ==, !=, <, >, <=, >=
+Exemplo: x > y (verifica se x é maior que y).
+Lógicos: and, or, not
+Exemplo: x > 5 and y < 10.
+De Atribuição: =, +=, -=, etc.
+Exemplo: x += 5 (equivale a x = x + 5).
+
+Variáveis
+Contêm valores que podem ser usados e manipulados no código.
+Não precisam de declaração de tipo explícita.
+
+Loops
+Usados para repetir blocos de código enquanto uma condição é verdadeira.
+for Loop
+Itera sobre uma sequência (lista, string, range, etc.).
+while Loop
+Repete enquanto a condição for verdadeira.
+
+imports
+Permitem usar funcionalidades de outros módulos ou bibliotecas.
+
+Orientação a Objetos
+Paradigma baseado em classes e objetos.
+Classe: Modelo ou "molde" para criar objetos.
+Objeto: Instância de uma classe com propriedades e métodos.
+
