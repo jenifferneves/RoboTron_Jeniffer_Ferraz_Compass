@@ -7,4 +7,4 @@ mes = idade // 30
 idade %= 30 
 dia = idade
 
-print(f'{ano} ano(s)\n{mes} mes(es)\n{dia} dia(s)')
+print(f'{ano} Ano(s)\n{mes} Mes(es)\n{dia} Dia(s)')
