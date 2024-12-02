@@ -1,0 +1,18 @@
+Git e Controle de Versões
+Git: É um sistema de controle de versões distribuído, amplamente utilizado para rastrear alterações no código-fonte de projetos. Ele permite que equipes de desenvolvimento colaborem de forma eficiente, mantendo um histórico completo das alterações realizadas.
+Controle de Versões: É a prática de gerenciar modificações em arquivos ao longo do tempo. Ele ajuda a:
+Rastrear alterações no código.
+Reverter para versões anteriores.
+Trabalhar de forma colaborativa sem conflitos.
+
+README Bem Estruturado
+O arquivo README.md é a "porta de entrada" de um repositório. Ele fornece informações essenciais sobre o projeto. Um README bem estruturado geralmente inclui:
+
+Título do Projeto: Nome do projeto em destaque.
+Descrição: Resumo breve sobre o objetivo e funcionalidade do projeto.
+Instalação: Passos para instalar e configurar o projeto.
+Uso: Exemplos de como usar o projeto.
+Tecnologias: Lista das ferramentas, linguagens e frameworks usados.
+Contribuição: Orientações para quem deseja colaborar.
+Licença: Informações sobre os direitos de uso do código.
+Contato: Links para suporte ou comunicação com os responsáveis.
