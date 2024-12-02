@@ -1,0 +1,53 @@
+﻿API é a sigla para Application Programming Interface, que significa Interface de Programação de Aplicativos.
+
+Ela define como as solicitações de dados ou funções devem ser feitas, processadas e respondidas, fornecendo uma forma estruturada para que aplicativos possam interagir uns com os outros.
+Por exemplo, uma API pode permitir que um aplicativo de clima acesse dados de previsão do tempo de um servidor de terceiros sem precisar conhecer a lógica interna do servidor, apenas utilizando os padrões da API.
+
+API REST
+Uma API REST (Representational State Transfer) segue um conjunto de princípios arquiteturais para a comunicação entre sistemas por meio do protocolo HTTP. Ela permite que os clientes interajam com recursos do servidor por meio de URLs, enviando e recebendo informações nos formatos padrão, geralmente JSON ou XML.
+Principais características de uma API REST:
+	• Stateless (Sem estado): Cada requisição feita ao servidor é independente e não mantém contexto entre as chamadas.
+	• Verbos HTTP: As operações principais são representadas pelos verbos HTTP:
+		○ GET: Recupera dados do servidor.
+		○ POST: Envia novos dados para o servidor.
+		○ PUT: Atualiza dados no servidor.
+		○ DELETE: Remove dados no servidor.
+	• Recursos: Representa entidades (como usuários, produtos) e são identificados por URLs únicas.
+
+Objetos JSON (JavaScript Object Notation)
+O JSON é um formato leve para a troca de dados, sendo amplamente utilizado em APIs REST. Ele é baseado em texto e usa uma estrutura simples de chave-valor, o que facilita a leitura e escrita por humanos e o processamento por máquinas.
+
+Requisições HTTP
+São a forma como navegadores, aplicativos e outros sistemas de software se comunicam com servidores para enviar e receber dados pela internet. HTTP (Protocolo de Transferência de Hipertexto), é o protocolo principal usado na web para trocar informações. As requisições HTTP são como “perguntas” ou “instruções” que enviamos a um servid
+
+
+Principais Tipos de Requisições HTTP
+MÉTODO
+
+AÇÃO
+
+IDEMPOTENCIA
+
+GET
+
+Recupera dados 
+
+Sim(repetir não altera o estado)
+
+POST
+
+Cria um novo recurso
+
+Não(repetir cria novos recursos)
+
+PUT
+
+Atualiza um recurso existente
+
+Sim(repetir mantém o estado)
+
+DELETE
+
+Remove um recurso
+
+Sim(repetir não causa erro adicional)
