@@ -1,4 +1,4 @@
-valor = int(input("Digite um valor inteiro para X: "))
+valor = int(input("Digite um valor inteiro para x: "))
 
 if valor % 2 == 0:
     fatorial = 1
