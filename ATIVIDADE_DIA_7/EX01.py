@@ -8,7 +8,7 @@ def retornar_json():
 
 json_retornado = retornar_json()
 
-print(json_retornado)
+print(json_retornado["copa-do-brasil"])
 
 
 
