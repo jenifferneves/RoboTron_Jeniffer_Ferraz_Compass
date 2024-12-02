@@ -8,6 +8,6 @@ for i in range(1, 21):
 
 if valores_pares:
     media_pares = sum(valores_pares) / len(valores_pares)
-    print(f"\nA média aritmética dos valores pares é: {media_pares:.2f}")
+    print(f"\nA média aritmética dos valores Pares é: {media_pares:.2f}")
 else:
-    print("\nNenhum valor par foi digitado.")
+    print("\nNenhum valor Par foi digitado.")
