@@ -7,4 +7,4 @@ if inicio < fim:
 else:
     duracao = (24 - inicio) + fim
 
-print('O JOGO DUROU', duracao, 'HORA(S)')
+print('O JOGO DUROU', duracao, 'HORA(s)')
