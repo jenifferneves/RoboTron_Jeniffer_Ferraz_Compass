@@ -1,4 +1,4 @@
-frutas_predefinidas = ["maçã", "banana", "pera"]
+frutas_predefinidas = ["Maçã", "Banana", "Pera"]
 
 frutas_usuario = []
 for i in range(1, 4):
