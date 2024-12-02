@@ -22,32 +22,12 @@ São a forma como navegadores, aplicativos e outros sistemas de software se comu
 
 
 Principais Tipos de Requisições HTTP
-MÉTODO
+MÉTODO    AÇÃO                            IDEMPOTENCIA
 
-AÇÃO
+GET       Recupera dados                  Sim(repetir não altera o estado)
 
-IDEMPOTENCIA
+POST      Cria um novo recurso            Não(repetir cria novos recursos)
 
-GET
+PUT       Atualiza um recurso existente   Sim(repetir mantém o estado)
 
-Recupera dados 
-
-Sim(repetir não altera o estado)
-
-POST
-
-Cria um novo recurso
-
-Não(repetir cria novos recursos)
-
-PUT
-
-Atualiza um recurso existente
-
-Sim(repetir mantém o estado)
-
-DELETE
-
-Remove um recurso
-
-Sim(repetir não causa erro adicional)
+DELETE    Remove um recurso               Sim(repetir não causa erro adicional)
