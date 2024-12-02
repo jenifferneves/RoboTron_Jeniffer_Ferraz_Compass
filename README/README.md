@@ -35,6 +35,7 @@ Editor de Código: Visual Studio e Pycharm
 Controle de Versão: GIT e GitHub
 
 Outras Ferramentas:
+
    OneNote- Anotações diárias
 
    Jira-reports diários de desenvolvimento
