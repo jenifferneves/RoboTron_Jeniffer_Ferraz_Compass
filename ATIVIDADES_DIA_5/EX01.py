@@ -1,1 +1,1 @@
-input("Hello word")
+input("Hello Word")
