@@ -8,7 +8,7 @@ arquivo = pd.read_csv(
 filtro = (arquivo["Year"] >= 1987) & (arquivo["Year"] <= 1999)
 dados_filtrados = arquivo[filtro]
 
-print("Nomes e idades dos atores vencedores (1987-1999):")
+print("Nomes e idades dos atores vencedores 1987-1999:")
 for _, row in dados_filtrados.iterrows():
     year = row["Year"]
     name = row["Name"]
