@@ -34,6 +34,8 @@ Editor de Código: Visual Studio e Pycharm
 
 Controle de Versão: GIT e GitHub
 
+ Biblioteca: pandas 
+
 Outras Ferramentas:
 
    OneNote- Anotações diárias
@@ -41,6 +43,7 @@ Outras Ferramentas:
    Jira-reports diários de desenvolvimento
        
    Estenção- gitignore dentro da pasta RoboTron para ignorar o .vs
+   
 
 🚀 Progresso e Métodos de Estudo
 
