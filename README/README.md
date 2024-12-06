@@ -80,6 +80,8 @@ Atualizações no progresso das apresentações e estudos.
 
 🤝 Contribuição
 
+Contribuição: Vídeos do Gustavo Guanabara
+
 Este projeto é voltado para aprendizado individual, mas sugestões e feedbacks são sempre bem-vindos! Eles são uma excelente oportunidade para expandir o conhecimento e melhorar as práticas de desenvolvimento.
 
 📧 Contato
