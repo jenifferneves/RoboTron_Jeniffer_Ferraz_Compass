@@ -1,5 +1,0 @@
-Q: Qual a diferença entre 'fork' e 'branch'?
-A: Forks são cópias de um repositório totalmente separados do original, branches são partes do mesmo repositório que constroem partes diferentes do programa e depois são mescladas (merged) ao todo.
-
-Q: O que é 'pull request'?
-A: É a requisição que precisa ser aprovada por diferentes membros da equipe para que uma branch possa ser mesclada a outra branch ou ao projeto principal.

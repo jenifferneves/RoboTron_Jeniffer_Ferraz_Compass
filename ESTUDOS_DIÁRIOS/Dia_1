@@ -1,27 +1,0 @@
-﻿O que é o GitHub?
-É um site e ferramenta online onde:
-	1. Você armazena seus projetos com segurança:Como um "cofre digital" para todos os arquivos do seu projeto (especialmente códigos), garantindo que eles estejam disponíveis de qualquer lugar.
-	2. Facilita o trabalho em equipe:Permite que várias pessoas colaborem no mesmo projeto, fazendo alterações e enviando sugestões, sem bagunçar o trabalho de ninguém.
-	3. Mostra o histórico do projeto:Assim como o Git, o GitHub também mantém todo o histórico de alterações, mas apresenta isso de forma visual e acessível, como uma linha do tempo.
-	4. Cria backup dos seus projetos:Mesmo que você perca algo no seu computador, seu trabalho estará seguro no GitHub.
-
-Funcionalidades principais:
-	1. Repositórios (Repos):São como pastas onde os projetos são armazenados. Cada repositório contém todos os arquivos do projeto e seu histórico de alterações.
-	2. Branches:No repositório, você pode criar "cópias paralelas" do projeto para testar mudanças sem alterar o principal. Exemplo: se o repositório principal é o "trabalho final", você pode criar uma branch chamada "testes" para experimentar ideias.
-	3. Pull Requests:Quando alguém faz alterações em uma branch e quer que elas sejam incluídas no projeto principal, cria-se um pull request. É como sugerir uma mudança para o "dono do projeto", que pode aceitar ou rejeitar.
-	4. Issues:Um sistema para rastrear problemas ou ideias de melhoria no projeto, funcionando como uma lista de tarefas.
-	5. Colaboração Pública ou Privada:
-		○ Projetos públicos podem ser vistos por qualquer pessoa (ótimo para projetos abertos e aprendizado).
-		○ Projetos privados são acessíveis apenas para quem você permitir.
-
-
-O que é Git?
-Git é como um sistema inteligente de controle de versões e colaboração, que ajuda pessoas a trabalharem juntas em projetos, sem confusão e com segurança de que nada importante ser
-Imagine que você está escrevendo um livro ou um relatório com várias pessoas. Você quer manter tudo organizado, garantir que ninguém perca as versões antigas e ainda ser capaz de reverter alterações se algo der errado. O Git é como um supergerenciador para isso, mas em vez de livros ou relatórios, ele é usado para arquivos de código.
-
-Como funciona o Git?
-Pense no Git como um "historiador" que:
-	1. Tira fotos do progresso: Cada vez que você faz uma alteração importante, você "tira uma foto" (chamada de commit no Git). Assim, você pode voltar a qualquer versão anterior se algo não sair como planejado.
-	2. Armazena versões de forma organizada: Ele guarda todas essas versões (chamadas de snapshots) de maneira eficiente, para que você possa consultar ou restaurar qualquer uma delas.
-	3. Facilita o trabalho em equipe: Se várias pessoas estão escrevendo o mesmo livro, o Git ajuda a combinar o trabalho de cada uma, mesmo que estejam trabalhando em partes diferentes. Ele até avisa quando duas pessoas alteram a mesma coisa, para que vocês resolvam juntos.
-Funciona como uma linha do tempo: Você pode ver todo o histórico do que foi feito, quem fez e quando. Isso ajuda a entender o que mudou ao longo do tempo.
