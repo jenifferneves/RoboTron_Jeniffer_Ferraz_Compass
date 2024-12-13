@@ -1,3 +1,3 @@
-O Robot Framework é uma ferramenta de automação de testes baseada em palavras-chave (keywords), muito utilizada para testes funcionais de APIs, interfaces Web e outras aplicações. Ele é open-source, expansível com bibliotecas externas (como SeleniumLibrary e RequestsLibrary), e seu formato de sintaxe é simples, o que facilita a colaboração entre desenvolvedores e não desenvolvedores.
+O Robot Framework é uma ferramenta de automação de testes baseada em palavras-chave (keywords), muito utilizada para testes funcionais de APIs, interfaces web e outras aplicações. Ele é open-source, expansível com bibliotecas externas (como SeleniumLibrary e RequestsLibrary), e seu formato de sintaxe é simples, o que facilita a colaboração entre desenvolvedores e não desenvolvedores.
 
 Neste primeiro dia configuramos o ambiente, instalamos as bibliotecas e ferramentas necessarias para começar a trabalhar nos códigos.
