@@ -1,0 +1,18 @@
+As keywords (ou palavras-chave) no Robot Framework são como comandos que dizem ao programa o que fazer durante um teste. 
+Elas tornam o teste fácil de entender, porque são escritas em linguagem simples e legível.
+
+Tipos de Keywords
+
+	1. Keywords padrão: Já vêm com o Robot Framework ou com bibliotecas que você adiciona.
+
+	2. Keywords personalizadas: Criadas por você para organizar e reaproveitar instruções nos testes.
+
+Exemplo.
+
+*** Settings ***
+Library    SeleniumLibrary
+
+*** Test Cases ***
+Acessar Site Compass
+    Open Browser    https://compass.uol/pt/home/    chrome
+
