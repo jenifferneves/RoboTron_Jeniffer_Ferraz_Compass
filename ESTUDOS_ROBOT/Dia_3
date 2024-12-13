@@ -1,0 +1,28 @@
+O que é TDD?
+TDD (Desenvolvimento Guiado por Testes) é uma abordagem para criar software onde você escreve os testes antes de escrever o código real. 
+Parece estranho no início, mas a ideia é garantir que o código funcione exatamente como deveria, desde o começo.
+Como funciona?
+O TDD segue três passos simples, chamados de Red-Green-Refactor (Vermelho-Verde-Refatorar):
+
+	1. Vermelho (Red): Escreva um teste que ainda não funciona, porque o código que ele testa ainda não existe.
+Exemplo: Teste para saber se uma função soma dois números corretamente.
+O teste vai falhar porque a função ainda não existe.
+
+	2. Verde (Green): Escreva o código mínimo necessário para fazer o teste passar.
+Crie a função de soma, mesmo que seja bem básica.
+Agora o teste deve passar.
+
+	3. Refatorar (Refactor): Melhore o código sem quebrar os testes.
+Ajuste a função para deixá-la mais eficiente ou organizada.
+
+Por que TDD é útil?
+	1. Evita erros: Como você escreve testes antes do código, é menos provável que introduza problemas.
+
+	2. Confiança no código: Se os testes passam, você sabe que o código funciona.
+
+	3. Melhor design de software: O TDD força você a pensar no que o código deve fazer antes de escrevê-lo.
+
+	4. Facilidade de manutenção: Se algo quebrar no futuro, os testes avisam.
+
+
+Cenários de Testes no proximo arquivo...
