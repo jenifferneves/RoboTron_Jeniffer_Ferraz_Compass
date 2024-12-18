@@ -23,3 +23,5 @@ Status Code: Um código numérico indicando o resultado da requisição.
 404: Não encontrado
 
 500: Erro interno do servidor.
+
+No proximo arquivo (base2.robot) é um código que da pra ter vários exemplos de responses e requests.
