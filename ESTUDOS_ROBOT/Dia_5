@@ -1,0 +1,25 @@
+Nessa sprint aprendemos a Lidar com Requests e Responses. 
+
+Requests (Requisições)
+
+Uma requisição é um pedido enviado de um cliente (como um navegador ou um aplicativo) para um servidor. O cliente solicita informações ou a execução de uma ação específica. As requisições podem ser do tipo:
+
+GET: Para obter dados do servidor.
+
+POST: Para enviar dados ao servidor (geralmente usado ao enviar formulários ou fazer login).
+
+PUT: Para atualizar ou substituir dados no servidor.
+
+DELETE: Para excluir dados no servidor.
+
+Responses (Respostas)
+
+Uma resposta é o que o servidor envia de volta para o cliente após processar a requisição. Ela contém o status da operação e os dados solicitados (se houver). As respostas geralmente incluem:
+
+Status Code: Um código numérico indicando o resultado da requisição.
+
+200: Sucesso (OK)
+
+404: Não encontrado
+
+500: Erro interno do servidor.
