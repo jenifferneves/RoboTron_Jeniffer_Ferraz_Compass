@@ -1,0 +1,164 @@
+Autenticação Simples em APIs com Robot Framework
+
+A autenticação simples é uma forma básica de proteger o acesso às APIs, geralmente usando chaves de API ou credenciais básicas (usuário e senha). 
+No Robot Framework, você pode implementar autenticação ao testar APIs usando a biblioteca RequestsLibrary.
+
+Você configura a autenticação diretamente no cabeçalho (para tokens) ou usa credenciais no momento da solicitação (para autenticação básica). 
+O Robot Framework facilita isso com comandos simples, permitindo validar o acesso e o comportamento da API.
+
+Exemplos... separe eles em arquivos separados e salvando com a extenção .robot no final
+
+base.robot    (Primeiro arquivo)
+
+*** Settings ***
+Documentation     Arquivo simples para requisição HTTP em APIs
+Library           RequestsLibrary
+Resource          ./usuarios_keywords.robot
+Resource          ./login_keywords.robot
+Resource          ./produtos_keywords.robot
+
+*** Test Cases ***
+
+Cenário: GET Todos os Usuários 200
+   [tags]      GET
+   Criar Sessão Serverest
+   GET Endpoint /usuarios
+   Validar Status Code 200 
+   Validar Quantidade ${128} 
+   Printar Conteudo Response   
+
+Cenário: POST Cadastrar Usuários 201
+   [tags]      POST
+   Criar Sessão Serverest
+   POST Endpoint /usuarios
+   Validar Status Code 201
+   Validar Se Mensagem Contem sucesso
+
+Cenário: PUT Editar Usuário 200
+   [tags]      PUT
+   Criar Sessão Serverest
+   PUT Endpoint /usuarios
+   Validar Status Code 201
+
+Cenário: DELETE Excluir Usuário 200
+   [tags]      DELETE
+   Criar Sessão Serverest
+   DELETE Endpoint /usuarios
+   Validar Status Code 200
+
+Cenário: POST Realizar login 200
+   [tags]      POSTLOGIN
+   Criar Sessão Serverest
+   POST Endpoint /login
+   Validar Status Code 200
+
+Cenário: POST Criar Produto 201
+   [tags]      POSTPRODUTO
+   Criar Sessão Serverest
+   POST Endpoint /produtos
+   Validar Status Code 201
+
+*** Keywords ***
+
+Criar Sessão Serverest
+   Create Session    serverest    ${BASE_URL} 
+
+Validar Status Code ${statuscode}
+    Should Be True     ${response.status_code} == ${statuscode}
+
+Validar Quantidade ${quantidade}
+    Should Be Equal     ${response.json()["quantidade"]}      ${quantidade}
+
+Validar Se Mensagem Contem ${palavra}
+    Should Contain     ${response.json()["message"]}          ${palavra}
+
+Printar Conteudo Response 
+    Log To Console      Nome: ${response.json()["usuarios"][5]["nome"]} 
+
+
+usuarios_keywords.robot (Segundo arquivo)
+
+*** Settings ***
+Documentation           Keywords e Variaveis para Ações de endpoints de usuarios
+
+*** Variables ***
+${BASE_URL}       https://serverest.dev 
+${nome_do_usuario}        Monica Silva
+${senha_do_usuario}       Teste123
+${email_do_usuario}        monicasilva30@gmail.com
+
+*** Keywords ***
+
+GET Endpoint /usuarios
+   ${response}    GET On Session    serverest    /usuarios
+   Set Global Variable    ${response}
+
+POST Endpoint /usuarios
+   &{payLoad}     Create Dictionary    nome=${nome_do_usuario}    email=${email_do_usuario}   password=${senha_do_usuario}    administrador=true
+   ${response}    POST On Session    serverest    /usuarios    data=&{payLoad}
+   Log To Console  Status Code: ${response.status_code}
+   Set Global Variable    ${response}
+
+PUT Endpoint /usuarios 
+   &{payLoad}     Create Dictionary    nome=Jorge Ferraz    email=jorgeferraz35@gmail.com    password=456    administrador=true  
+   ${response}    PUT On Session    serverest    /usuarios/OJXoUBnX84BeQOQJ    data=&{payLoad}
+   Log To Console  Status Code: ${response.status_code}
+   Set Global Variable    ${response}
+
+DELETE Endpoint /usuarios
+   ${response}    DELETE On Session    serverest    /usuarios/jogfODIlXsqxNFS2
+   Log To Console  Status Code: ${response.status_code}
+   Set Global Variable    ${response}
+
+login_keywords.robot  (Terceiro arquivo)
+
+*** Settings ***
+Documentation           Keywords e Variaveis para Ações de endpoints de usuarios
+
+*** Variables ***
+${BASE_URL}       https://serverest.dev 
+${nome_do_usuario}        Monica Silva
+${senha_do_usuario}       Teste123
+${email_do_usuario}        monicasilva30@gmail.com
+
+*** Keywords ***
+
+GET Endpoint /usuarios
+   ${response}    GET On Session    serverest    /usuarios
+   Set Global Variable    ${response}
+
+POST Endpoint /usuarios
+   &{payLoad}     Create Dictionary    nome=${nome_do_usuario}    email=${email_do_usuario}   password=${senha_do_usuario}    administrador=true
+   ${response}    POST On Session    serverest    /usuarios    data=&{payLoad}
+   Log To Console  Status Code: ${response.status_code}
+   Set Global Variable    ${response}
+
+PUT Endpoint /usuarios 
+   &{payLoad}     Create Dictionary    nome=Jorge Ferraz    email=jorgeferraz35@gmail.com    password=456    administrador=true  
+   ${response}    PUT On Session    serverest    /usuarios/OJXoUBnX84BeQOQJ    data=&{payLoad}
+   Log To Console  Status Code: ${response.status_code}
+   Set Global Variable    ${response}
+
+DELETE Endpoint /usuarios
+   ${response}    DELETE On Session    serverest    /usuarios/jogfODIlXsqxNFS2
+   Log To Console  Status Code: ${response.status_code}
+   Set Global Variable    ${response}
+
+produtos_keywords.robot
+
+*** Settings ***
+Documentation           Keywords e Variaveis para Ações de endpoints de Produtos
+
+*** Variables ***
+${token_auth}           Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZlcm5hbmRvc2lsdmFAcWEuY29tLmJyIiwicGFzc3dvcmQiOiJ0ZXN0ZSIsImlhdCI6MTczNDYyODUyNSwiZXhwIjoxNzM0NjI5MTI1fQ.w_kOuPhGrQ62mXDQlnY-3fpAbnqqcNTQID-QFkdIlmY
+
+*** Keywords ***
+
+POST Endpoint /produtos
+   &{header}      Create Dictionary         Authorization=${token_auth}
+   &{payLoad}     Create Dictionary         nome=TV Samsung 50pl         preco=2500           descricao=TV         quantidade=2
+   ${response}    POST On Session    serverest    /produtos    data=&{payLoad}           headers=${header}
+   Log To Console  Status Code: ${response.status_code}
+   Set Global Variable    ${response}
+
+Todos os arquivos estão ligados no primeiro (base.robot), então independente se for rodar separados eles vão dar certo, somente atualize os dados quando for rodar. 
