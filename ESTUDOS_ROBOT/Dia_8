@@ -1,0 +1,160 @@
+Encadeamento de Autenticação em APIs com Robot Framework
+
+O encadeamento de autenticação é o processo de usar o resultado de uma autenticação inicial (como um token ou uma chave) para acessar outros endpoints em uma API. 
+Ele é comum em sistemas onde você precisa autenticar primeiro para receber um token que será usado em chamadas futuras.
+
+Como Fazer no Robot Framework:
+
+Autenticação Inicial: Realiza uma solicitação para obter o token de acesso.
+
+Encadeamento: Usa o token obtido para autenticar chamadas a outros endpoints.
+
+O encadeamento usa o token obtido em uma primeira autenticação para realizar chamadas subsequentes.
+
+O Robot Framework facilita isso ao permitir capturar e reutilizar dados entre etapas com variáveis.
+
+Muito útil para sistemas que requerem login antes de acessar funcionalidades ou dados protegidos.
+
+Exemplo (Caso queira rodar esses arquivos salve eles com a extenção .robot separadamente)
+
+base.robot             (Primeiro arquivo)
+
+*** Settings ***
+Documentation     Arquivo simples para requisição HTTP em APIs
+Library           RequestsLibrary
+Resource          ./usuarios_keywords.robot
+Resource          ./login_keywords.robot
+Resource          ./produtos_keywords.robot
+
+*** Test Cases ***
+
+Cenário: GET Todos os Usuários 200
+   [tags]      GET
+   Criar Sessão Serverest
+   GET Endpoint /usuarios
+   Validar Status Code 200 
+   Validar Quantidade ${128} 
+   Printar Conteudo Response   
+
+Cenário: POST Cadastrar Usuários 201
+   [tags]      POST
+   Criar Sessão Serverest
+   POST Endpoint /usuarios
+   Validar Status Code 201
+   Validar Se Mensagem Contem sucesso
+
+Cenário: PUT Editar Usuário 200
+   [tags]      PUT
+   Criar Sessão Serverest
+   PUT Endpoint /usuarios
+   Validar Status Code 201
+
+Cenário: DELETE Excluir Usuário 200
+   [tags]      DELETE
+   Criar Sessão Serverest
+   DELETE Endpoint /usuarios
+   Validar Status Code 200
+
+Cenário: POST Realizar login 200
+   [tags]      POSTLOGIN
+   Criar Sessão Serverest
+   POST Endpoint /login
+   Validar Status Code 200
+
+Cenário: POST Criar Produto 201                  (Cenário que está realizando o uso do Encadeamento de Autenticação)
+   [tags]      POSTPRODUTO
+   Criar Sessão Serverest
+   Fazer Login e Armazenar Token
+   POST Endpoint /produtos
+   Validar Status Code 201
+
+Cenário DELETE Excluir Produto 200               (Cenário que está realizando o uso do Encadeamento de Autenticação)
+   [tags]      DELETEPRODUTO
+   Criar Sessão Serverest
+   Fazer Login e Armazenar Token
+   Criar um Produto e Armazenar ID
+   DELETE Endpoint /produtos
+   Validar Status Code 200
+
+
+*** Keywords ***
+
+Criar Sessão Serverest
+   Create Session    serverest    ${BASE_URL} 
+
+Validar Status Code ${statuscode}
+    Should Be True     ${response.status_code} == ${statuscode}
+
+Validar Quantidade ${quantidade}
+    Should Be Equal     ${response.json()["quantidade"]}      ${quantidade}
+
+Validar Se Mensagem Contem ${palavra}
+    Should Contain     ${response.json()["message"]}          ${palavra}
+
+Printar Conteudo Response 
+    Log To Console      Nome: ${response.json()["usuarios"][5]["nome"]} 
+
+
+
+produto_keywords.robot       (Segundo arquivo)
+
+*** Settings ***
+Documentation           Keywords e Variaveis para Ações de endpoints de Produtos
+
+*** Keywords ***
+
+POST Endpoint /produtos
+   &{header}      Create Dictionary         Authorization=${token_auth}
+   &{payLoad}     Create Dictionary         nome=TV LG 60pl         preco=250           descricao=TV         quantidade=2
+   ${response}    POST On Session    serverest    /produtos    data=&{payLoad}           headers=${header}
+   Log To Console  Status Code: ${response.status_code}
+   Set Global Variable    ${response}
+
+DELETE Endpoint /produtos
+   &{header}      Create Dictionary         Authorization=${token_auth}
+   ${response}    DELETE On Session    serverest    /produtos/${id_produto}          headers=${header}
+   Log To Console  Status Code: ${response.status_code}
+   Set Global Variable    ${response}
+
+Validar Ter Criado Produto
+   Should Be Equal          ${response.json()["message"]}         Cadastro realizado com sucesso
+   Should Not Be Empty      ${response.json()["_id"]}
+
+Criar um Produto e Armazenar ID
+   POST Endpoint /produtos
+   Validar Ter Criado Produto
+   ${id_produto}            Set Variable                          ${response.json()["_id"]}
+   Log To Console           ID Produto: ${id_produto}
+   Set Global Variable      ${id_produto}
+
+
+login_keywords.robot             (Terceito arquivo)
+
+*** Settings ***
+Documentation           Keywords e Variaveis para Ações de endpoints de login
+
+*** Variables ***
+${email_para_login}         fernandosilva@qa.com.br
+${password_para_login}      teste
+
+*** Keywords ***
+
+POST Endpoint /login
+   &{payLoad}     Create Dictionary    email=${email_para_login}           password=${password_para_login}
+   ${response}    POST On Session    serverest    /login    data=&{payLoad}
+   Log To Console  Status Code: ${response.status_code}
+   Set Global Variable    ${response}
+
+Validar Ter Logado
+   Should Be Equal          ${response.json()["message"]}         Login realizado com sucesso
+   Should Not Be Empty      ${response.json()["authorization"]}
+   
+Fazer Login e Armazenar Token
+   POST Endpoint /login
+   Validar Ter Logado
+   ${token_auth}            Set Variable             ${response.json()["authorization"]}
+   Log To Console           Token Salvo: ${token_auth}
+   Set Global Variable      ${token_auth}
+   
+
+Todos os arquivos estão ligados no (base.robot), esses arquivos estão realizando o Encadeamento de Autenticação, quando for rodar atualize os dados para não dar erro.
