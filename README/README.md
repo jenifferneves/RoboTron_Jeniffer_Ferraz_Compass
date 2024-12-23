@@ -50,7 +50,7 @@ Outras Ferramentas:
        
    Estenção- gitignore dentro da pasta RoboTron para ignorar o .vs
 
-   chatGPT- Usado para a estrutura do redme e a escrita do repositório.
+   chatGPT- Usado para a estrutura do README e a escrita do repositório.
 
 🚀 Progresso e Métodos de Estudo
 
