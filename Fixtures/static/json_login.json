@@ -1,0 +1,19 @@
+{
+  "user_valido": {
+    "email": "rogeriosantos@gmail.com",
+    "senha": "senha123"
+  },
+  "user_invalido": {
+    "email": "emailexistente@gmail.com",
+    "senha": "teste123"
+  },
+  "user_sem_senha": {
+    "email": "robertosouza@gmail.com",
+    "senha": ""
+  },
+  "user_sem_email": {
+    "email": "",
+    "senha": "senha123"
+  }
+
+}
