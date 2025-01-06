@@ -1,0 +1,27 @@
+{
+  "user_valido": {
+    "nome": "Robson Silva",
+    "email": "robsonsilva@gmail.com",
+    "passsword": "test123",
+    "administrador": "true"
+  },
+
+  "user_invalido": {
+    "nome": "Invalido Teste",
+    "email": "invalidotest@gmail.com",
+    "passsword": "test",
+    "administrador": "true"
+  },
+  "user_sem_senha": {
+    "nome": "Railson Silva",
+    "email": "railsonsilva@gmail.com",
+    "passsword": "",
+    "administrador": "true"
+  },
+  "user_sem_email": {
+    "nome": "Cleiton Souza",
+    "email": "",
+    "passsword": "test",
+    "administrador": "true"
+  }
+}
