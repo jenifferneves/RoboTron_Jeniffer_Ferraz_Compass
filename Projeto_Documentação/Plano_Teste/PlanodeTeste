@@ -1,0 +1,125 @@
+Plano de Teste
+
+Plano de Teste para API ServeRest
+
+1. Introdução
+
+A API Serverest é uma API de estudo que simula as funcionalidades de um e-commerce, permitindo o cadastro de login, usuários, produtos e carrinhos. Este plano de teste foi elaborado para avaliar a qualidade das funcionalidades dessa API, garantindo que o sistema responde corretamente às operações de usuários e administrações. A API foi selecionada pela diversidade de operações que oferece, sendo útil para testar operações CRUD (Create, Read, Update e Delete) e permissões.
+
+2. Objetivo
+
+O objetivo principal deste plano de teste é assegurar que a API Serverest funcione de maneira confiável e correta em relação às suas principais operações, garantindo que:
+	• As funcionalidades atendam aos requisitos e ofereçam uma experiência de uso apropriada.
+	• As respostas da API sejam consistentes, seguindo os códigos de status HTTP apropriados.
+	• A segurança e as permissões de usuários estejam implementadas corretamente.
+	• A performance das principais operações da API mantenha-se dentro dos padrões aceitáveis, especialmente em termos de tempo de resposta e estabilidade.
+
+3. Escopo
+
+O escopo cobre operações básicas de um e-commerce, com foco em recursos essenciais para garantir a usabilidade e segurança da API Serverest, incluindo Login, Usuários, Produtos e Carrinho. A API deve possibilitar:
+	• Realização de login para o controle de acesso.
+	• Cadastro e autenticação de usuários, e recuperação de informações.
+	• Gestão de produtos de forma segura, com permissões para administradores.
+	• Operações com o carrinho de compras, essenciais para a experiência do usuário.
+	• Operações de busca e filtros de produtos para melhorar a experiência do usuário.
+
+4. Estratégia de Teste
+
+A estratégia de teste será dividida em testes manuais e automatizados:
+	1. Testes Manuais: Realização de casos de teste exploratórios e testes iniciais de validação para identificação de falhas preliminares.
+	2. Testes Automatizados: Scripts de automação para garantir que operações críticas (CRUD) funcionem conforme esperado e que a consistência dos dados seja mantida. Serão usados testes de carga e desempenho para validar a estabilidade da API.
+
+5. Pessoas envolvidas
+
+	• Analista de Testes
+	• Desenvolvedor da API
+	• Gerente de Qualidade
+	
+
+6. Priorização de Teste
+
+	1. Alta Prioridade:
+		· Cadastro e autenticação de usuários, incluindo política de expiração e renovação de tokens.
+		· Permissões de criação, exclusão e atualização de produtos;
+		· Adição de produtos ao carrinho e permissões para operações de carrinho.
+		· Permissões para exclusão e cadastro de carrinho.
+		
+	2. Média Prioridade:
+		· Atualização e exclusão de usuários e gerenciamento de permissões para ações específicas.
+		
+	3. Baixa Prioridade:
+		· Consultas de usuários, produtos e carrinho.
+
+7. Candidato para Automação
+
+ Os seguintes casos são candidatos para automação, pois envolvem operações repetitivas e de alta importância:
+	• Autenticação de usuários (incluindo tokens).
+	• Cadastro, listagem e filtros de produtos
+	• Operações no carrinho, como adição e remoção de itens.
+	• Consistência de dados após operações simultâneas (especialmente no carrinho e autenticação).
+
+8. Local dos Testes
+
+Os testes serão executados de forma remota, usando um ambiente de desenvolvimento controlado com acesso à API Serverest. Um servidor de teste (local ou em nuvem) será configurado para assegurar a integridade dos dados e o controle dos usuários durante os testes.
+
+9. Recursos necessários
+
+Ambiente: Ambiente de teste isolado para a API Serverest.
+
+Ferramentas de Teste:
+	• Postman: Para execução de testes manuais e automação inicial.
+	• Newman: Para automação dos testes definidos no Postman.
+	• Supertest (ou Mocha + Chai): Para automação avançada e testes unitários de respostas da API.
+	• Dados de Teste: Conjunto de dados para validar a funcionalidade da API (login, usuários, produtos e carrinhos).
+	• Jira: Para gerenciar as tarefas de teste e acompanhar o progresso.
+	• Xmind: Para a criação do mapa mental da API
+	• Redes: Wi-Fi,4G/5G
+
+10. Critérios usados/ Critérios de aceite. 
+
+	• Cadastro e autenticação de usuários: A API deve permitir o cadastro de novos usuários e autenticação com token para usuários já cadastrados.
+	
+	• Operações de Produtos e Permissões: Somente administradores devem poder cadastrar, atualizar e excluir produtos.
+	
+	• Carrinho: A API deve permitir a criação de um carrinho e a adição/remoção de produtos.
+	
+	• Status de Resposta: A API deve responder com os códigos de status apropriados (200 para sucesso, 401 para não autorizado, 403 para proibição, etc.).
+	
+	• Consistência de Dados: Nenhuma requisição deve comprometer a consistência dos dados, e todos os dados devem ser salvos e recuperados corretamente.
+	
+	• Tempo de Resposta: O tempo de resposta para operações padrão deve ser inferior a 2 segundos.
+
+11. Riscos
+
+	• Falta de Documentação Completa da API: A ausência de documentação detalhada pode dificultar a criação de testes abrangentes.
+	
+	• Ambiente de Teste Limitado: A execução de muitos testes simultâneos pode sobrecarregar o ambiente, afetando os resultados de desempenho.
+	
+	• Inconsistência de Dados: Falhas em transações simultâneas, como operações de carrinho, podem comprometer os dados durante os testes.
+
+12. Como os resultados dos testes serão divulgados
+
+	• Relatório Diário: Durante os testes, relatórios diários serão gerados e enviados para as partes interessadas, detalhando o progresso e os defeitos encontrados.
+	
+	• Relatório Final: Ao término dos testes, um relatório final será gerado, incluindo:
+		· Resultados das funcionalidades testadas.
+		· Número de falhas e sucessos.
+		· Problemas críticos e sugestões de correções.
+		· Comparativo entre a versão inicial e a versão final após as correções.
+
+13. Cronograma
+
+FASE	                 DESCRIÇÃO	                                    DURAÇÃO ESTIMADA
+Planejamento	         Definir escopo, ferramentas, dados de teste	2 dias
+Configuração	         Configuração do ambiente e ferramentas	        2 dias
+Teste Manual	         Execução dos testes manuais iniciais	        3 dias
+Automação de Testes	     Criar e executar scripts automáticos	        3 dias
+Testes de Regressão	     Reexecutar testes após correções	            2 dias
+Análise de Resultados 	 Geração e análise do relatório final           1 dia
+Fase Final	             Tempo total	                                13 dias 
+
+
+14. Observações Complementares
+	• Testar com diferentes perfis de usuário (admin e comum) para assegurar a aplicação correta das permissões.
+	• Garantir que os dados sensíveis não sejam exibidos nas respostas.
+	• Considerar cenários de carga para verificar a estabilidade da API em uso intensivo.
