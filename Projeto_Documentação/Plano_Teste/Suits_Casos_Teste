@@ -1,0 +1,19 @@
+1. Login/Usuários
+	• Cadastro de Usuário Válido: Verificar se um usuário com dados corretos pode ser cadastrado com sucesso.
+	• Cadastro de Usuário Inválido: Testar se o sistema bloqueia o cadastro quando os dados são inválidos ou incompletos (ex., senha faltando ou e-mail inválido).
+	• Login com Credenciais Válidas: Garantir que um usuário pode fazer login com as credenciais corretas.
+	• Login com Credenciais Inválidas: Confirmar que o sistema bloqueia o login com dados errados.
+	• Exclusão de Usuário Existente: Verificar se um usuário registrado pode ser excluído corretamente.
+	• Exclusão de Usuário Não Existente: Garantir que a API retorne uma mensagem apropriada se a tentativa for excluir um usuário que não existe.
+	
+2. Produtos
+	• Listagem de Produtos: Confirmar que todos os produtos cadastrados são exibidos corretamente.
+	• Criação de Produto (Administrador): Verificar se um administrador pode adicionar um novo produto ao sistema.
+	• Atualização de Produto: Garantir que um produto existente possa ser atualizado (como o preço ou a quantidade).
+	• Exclusão de Produto: Testar se um produto pode ser excluído corretamente.
+	• Permissões de Acesso para Produtos: Confirmar que apenas administradores podem cadastrar, atualizar ou excluir produtos.
+
+3. Carrinho
+	• Adicionar Produto ao Carrinho: Verificar se um produto pode ser adicionado ao carrinho corretamente.
+	• Listagem de Itens no Carrinho: Confirmar que o sistema exibe os itens presentes no carrinho para o usuário.
+	• Remoção de Produto do Carrinho: Testar se um item pode ser removido corretamente do carrinho.
