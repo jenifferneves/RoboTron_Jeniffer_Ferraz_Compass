@@ -10,7 +10,9 @@ O objetivo deste repositório é documentar o progresso no estudo de ferramentas
 
 📂 Estrutura do Repositório
 
-O repositório está organizado em pastas que refletem o progresso dos estudos e atividades realizadas:
+O repositório está organizado em pastas e branches que refletem o progresso dos estudos e atividades realizadas:
+
+Pastas
 
 Atividades dia 5: Exercícios realizados no quinto dia de estudo.
 
@@ -22,13 +24,27 @@ Trilha Robotron: Apresentações realizadas sobre temas como Fundamentos e Quali
 
 Estudos Robots: Exercícios e códigos relacionados ao estudo do Robot Framework, explorando automação de testes e boas práticas.
 
+ETC...
+
 Branches
 
 main: Versão estável consolidada, representando o "produto final". ⚠ Nota: Não são feitos commits diretamente na main.
 
-Develop: Branch de desenvolvimento ativo, onde são registrados os exercícios, estudos e progresso contínuo.
+develop: Branch de desenvolvimento ativo, onde são registrados os exercícios, estudos e progresso contínuo.
 
 robot_Framework: Branch dedicada ao estudo do Robot Framework, onde estão armazenados os códigos e exercícios na pasta Estudos Robots.
+
+Login_ServeRest: Códigos para realização de testes relacionados ao login na API ServeRest.
+
+Usuário_ServeRest: Códigos para realização de testes relacionados ao usuário na API ServeRest.
+
+Produto_ServeRest: Códigos para realização de testes relacionados a produtos na API ServeRest.
+
+Carrinho_ServeRest: Códigos para realização de testes relacionados a carrinhos na API ServeRest.
+
+ServeRest_Projeto: Contém o mapa mental da API ServeRest, o plano de teste e as suites de teste.
+
+Support_ServeRest: Códigos de suporte para os testes realizados na API ServeRest.
 
 💻 Ferramentas Utilizadas
 
@@ -36,27 +52,27 @@ Linguagem: Python
 
 Ferramenta de Automação de Testes: Robot Framework
 
-Editor de Código: Visual Studio e Pycharm
+Editor de Código: Visual Studio e Visual Studio Code
 
 Controle de Versão: GIT e GitHub
 
-Biblioteca: pandas 
+Biblioteca: pandas
 
 Outras Ferramentas:
 
-   OneNote- Anotações diárias
+OneNote: Para anotações diárias
 
-   Jira-reports diários de desenvolvimento
-       
-   Estenção- gitignore dentro da pasta RoboTron para ignorar o .vs
+Jira: Para relatórios diários de desenvolvimento
 
-   chatGPT- Usado para a estrutura do README e a escrita do repositório.
+Extensão gitignore: Configurada dentro da pasta RoboTron para ignorar o .vs
+
+chatGPT: Usado para estruturação do README.
 
 🚀 Progresso e Métodos de Estudo
 
-Estudos Diários:
+Estudos Diários
 
-Todos os dias, realizo exercícios e registro códigos com foco em:
+Todos os dias, realizo exercícios e códigos de registro com foco em:
 
 Fundamentos de Python (loops, variáveis, controle de fluxo, manipulação de arquivos, etc.).
 
@@ -66,39 +82,102 @@ Boas práticas de codificação e organização.
 
 Estudo de automação de testes com o Robot Framework, incluindo:
 
-Criação de scripts de teste./Execução e análise de resultados./Boas práticas de automação.
+Criação de scripts de teste.
 
-Commits Regulares:
+Execução e análise de resultados.
+
+Boas práticas de automação.
+
+Commits Regulares
 
 Os commits são feitos diariamente, garantindo o acompanhamento do progresso e a rastreabilidade das mudanças.
 
-Organização:
+Organização
 
 Todo o conteúdo está separado em pastas com nomenclaturas intuitivas, como:
 
 Atividades dia 5, Atividades dia 7, Estudos diários, Trilha RoboTron e Estudos Robots.
 
+🛠 Instalação de Ferramentas e Bibliotecas
 
-🚀 Atualizações Diárias
+Python
 
-Comprometo-me a realizar commits diários, refletindo:
+Acesse o site oficial: https://www.python.org/.
 
-A prática constante em Python.
+Baixe a versão compatível com o seu sistema operacional.
 
-A execução de exercícios e projetos do dia.
+Siga as instruções de instalação, certificando-se de marcar a opção "Add Python to PATH".
 
-Atualizações no progresso das apresentações e estudos.
+Visual Studio e Visual Studio Code
+
+Baixe o Visual Studio Code em: https://code.visualstudio.com/.
+
+Instale seguindo as instruções do assistente de instalação.
+
+Robot Framework
+
+Certifique-se de que o Python está instalado.
+
+Abra o terminal e execute:
+
+pip install robotframework
+
+Biblioteca pandas
+
+No terminal, execute:
+
+pip install pandas
+
+GIT
+
+Acesse https://git-scm.com/ e baixe a versão para o seu sistema operacional.
+
+Siga as instruções de instalação.
+
+Extensão gitignore
+
+Adicione o arquivo .gitignore ao repositório.
+
+No arquivo, inclua:
+
+.vs
+
+📝 Execução dos Códigos
+
+Clone o repositório para sua máquina local:
+
+git clone <URL_DO_REPOSITORIO>
+
+Navegue até a pasta desejada.
+
+Execute os scripts Python ou Robot Framework conforme indicado.
+
+Para Python:
+
+python nome_do_script.py
+
+Para Robot Framework:
+
+robot nome_da_suite.robot
 
 🤝 Contribuição
 
-Contribuição: Vídeos do Gustavo Guanabara
+Apoio
+
+Professor da Trilha do Projeto: Demetrio
+
+Mentor do Projeto: Roger
+
+chatGPT: Suporte para estruturação do README.
+
+Recursos Adicionais
+
+Vídeos de Gustavo Guanabara
 
 Este projeto é voltado para aprendizado individual, mas sugestões e feedbacks são sempre bem-vindos! Eles são uma excelente oportunidade para expandir o conhecimento e melhorar as práticas de desenvolvimento.
 
 📧 Contato
 
-Caso tenha dúvidas ou sugestões:
-
 E-mail: jenifferferrasz03@gmail.com
 
-LinkedIn: www.linkedin.com/in/jeniffer-ferraz-42166a254
+LinkedIn: Jeniffer Ferraz
