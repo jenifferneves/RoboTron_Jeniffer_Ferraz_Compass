@@ -66,7 +66,7 @@ Jira: Para relatórios diários de desenvolvimento
 
 Extensão gitignore: Configurada dentro da pasta RoboTron para ignorar o .vs
 
-chatGPT: Usado para estruturação do README e escrita do repositório
+chatGPT: Usado para estruturação do README.
 
 🚀 Progresso e Métodos de Estudo
 
@@ -168,7 +168,7 @@ Professor da Trilha do Projeto: Demetrio
 
 Mentor do Projeto: Roger
 
-chatGPT: Suporte para estruturação do README e escrita do repositório
+chatGPT: Suporte para estruturação do README.
 
 Recursos Adicionais
 
