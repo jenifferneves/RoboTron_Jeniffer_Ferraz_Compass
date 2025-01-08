@@ -166,7 +166,7 @@ Apoio
 
 Professor da Trilha do Projeto: Demetrio
 
-Mentor do Projeto: Roger
+Mentor do Projeto: Roger Rezende Ribeiro
 
 chatGPT: Suporte para estruturação do README.
 
